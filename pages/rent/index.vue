@@ -1,7 +1,7 @@
 <template>
   <div>
     rent index.vue
-    <nuxt-link to="/rent/10195?main=10558&groupNo=2">to rent</nuxt-link>
+    <nuxt-link :to="`/rent/10195?main=10558&groupNo=2`">to rent</nuxt-link>
   </div>
 </template>
 
