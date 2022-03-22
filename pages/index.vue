@@ -11,10 +11,14 @@ import axios from "axios";
 export default {
   name: "IndexPage",
   async asyncData() {
-    console.log("asyncData! (get)");
-    let { data } = await axios.get(
-      "https://floating-mountain-61278.herokuapp.com/todos"
-    );
+    console.log("asyncData! (get) 觸發");
+    let data;
+    await axios
+      .get("https://dorts.pascation.com.tw/api/Member/GetTenderInfoById/20355")
+      .then((res) => {
+        console.log("GetTenderInfoById", res);
+        data = res.data;
+      });
 
     return {
       data,
