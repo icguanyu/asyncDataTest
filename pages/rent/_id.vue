@@ -8,11 +8,11 @@
 import axios from "axios";
 export default {
   name: "rent-id",
-  async asyncData({ params, query, error }) {
+  async asyncData({ error }) {
     let query_params = {
-      TenderBaseDataId: params.id,
-      TenderBuildingMainIds: query.main,
-      GroupNo: query.groupNo,
+      TenderBaseDataId: "121",
+      TenderBuildingMainIds: "364",
+      GroupNo: "1",
     };
     console.log("asyncData! GetRentDetail", query_params);
     let data;
