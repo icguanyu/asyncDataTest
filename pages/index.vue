@@ -3,6 +3,8 @@
     <Tutorial />
 
     <nuxt-link to="/post">to post</nuxt-link>
+
+    <p>{{ data }}</p>
   </div>
 </template>
 

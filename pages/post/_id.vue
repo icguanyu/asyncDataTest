@@ -1,5 +1,8 @@
 <template>
-  <div>_id.vue</div>
+  <div>
+    _id.vue
+    <p>{{ data }}</p>
+  </div>
 </template>
 
 <script>
