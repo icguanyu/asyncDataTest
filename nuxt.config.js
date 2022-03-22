@@ -2,16 +2,6 @@ export default {
   generate: {
     fallback: true
   },
-  env: {
-    baseUrl:
-      process.env.NODE_ENV === "development"
-        ? "https://dorts.pascation.com.tw"
-        : "https://dorts.pascation.com.tw",
-    img_baseUrl:
-      process.env.NODE_ENV === "development"
-        ? "https://dorts.pascation.com.tw"
-        : "https://dorts.pascation.com.tw"
-  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -57,7 +47,6 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
-    proxy: true
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

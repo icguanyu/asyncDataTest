@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import { Tenders } from "@/api/Tenders";
+import axios from "axios";
 export default {
   name: "rent-id",
   async asyncData({ params, query, error }) {
@@ -16,14 +16,19 @@ export default {
     };
     console.log("asyncData! GetRentDetail", query_params);
     let data;
-    await Tenders.GetRentDetail(query_params).then((res) => {
-      console.log(res);
-      if (res.status == 200) {
-        data = res.data;
-      } else {
-        error({ statusCode: 404, message: "找不到此標租物件。" });
-      }
-    });
+    await axios
+      .post(
+        "https://dorts.pascation.com.tw/api/Member/GetRentDetail",
+        query_params
+      )
+      .then((res) => {
+        console.log(res);
+        if (res.status == 200) {
+          data = res.data;
+        } else {
+          error({ statusCode: 404, message: "找不到此標租物件。" });
+        }
+      });
     return { data };
   },
   mounted() {
