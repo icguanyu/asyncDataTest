@@ -2,6 +2,16 @@ export default {
   generate: {
     fallback: true
   },
+  env: {
+    baseUrl:
+      process.env.NODE_ENV === "development"
+        ? "https://dorts.pascation.com.tw"
+        : "https://dorts.pascation.com.tw",
+    img_baseUrl:
+      process.env.NODE_ENV === "development"
+        ? "https://dorts.pascation.com.tw"
+        : "https://dorts.pascation.com.tw"
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 

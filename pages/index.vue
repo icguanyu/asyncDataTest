@@ -3,6 +3,7 @@
     <Tutorial />
 
     <nuxt-link to="/post">to post</nuxt-link>
+    <nuxt-link to="/rent">to rent</nuxt-link>
 
     <p>{{ data }}</p>
   </div>
