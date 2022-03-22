@@ -17,10 +17,15 @@ export default {
       GroupNo: query.groupNo,
     };
     let data;
-    await Tenders.GetRentDetail(query_params).then((res) => {
-      console.log(res);
-      data = res.data;
-    });
+    await axios
+      .post(
+        "https://dorts.pascation.com.tw/api/Member/GetRentDetail",
+        query_params
+      )
+      .then((res) => {
+        console.log(res);
+        data = res.data;
+      });
     return { data };
   },
   mounted() {
