@@ -27,6 +27,7 @@ export const Tenders = {
     return request.put("/api/Member/EditTenderStyleToDoc", data);
   },
   GetRentDetail: (data) => {
+    console.log('GetRentDetail', data);
     return request.post("/api/Member/GetRentDetail", data);
   },
   GetBuyDetail: (data) => {
